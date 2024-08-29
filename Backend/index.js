@@ -11,6 +11,7 @@ const { isRealString } = require("./utils/validation");
 const { Users } = require("./utils/users");
 const publicPath = path.join(__dirname, "../public");
 const PORT = process.env.PORT || 8080;
+const host = "localhost";
 
 const app = express();
 const server = http.createServer(app);
@@ -88,5 +89,5 @@ io.on("connection", (socket) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
+  console.log(`Running on http://${host}:${PORT}`);
 });
