@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "moment": "^2.22.2",
     "socket.io": "^2.1.1"
@@ -13,8 +14,8 @@
     "nodemon": "^1.18.5"
   },
   "scripts": {
-    "start": "nodemon server/index.js",
-    "serve": "node server/index.js",
+    "start": "nodemon api/index.js",
+    "serve": "node api/index.js",
     "test": "jest"
   }
 }

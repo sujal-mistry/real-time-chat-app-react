@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const http = require("http");
 const socketIO = require("socket.io");
-
+var cors = require("cors");
 const {
   generateMessage,
   generateLocationMessage,
@@ -14,8 +14,10 @@ const PORT = process.env.PORT || 4000;
 const host = "localhost";
 
 const app = express();
+
 const server = http.createServer(app);
 app.use(express.static(publicPath));
+app.use(cors());
 
 var io = socketIO(server);
 var users = new Users();
