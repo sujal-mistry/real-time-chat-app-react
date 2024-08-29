@@ -37,7 +37,7 @@ class Chat extends Component {
       room: this.props.match.params.room,
     };
 
-    socket = io("https://real-time-chat-app-zeta.vercel.app");
+    socket = io("http://localhost:4000");
 
     socket.emit("join", params, function (err) {
       if (err) {
